@@ -14,9 +14,9 @@ document.getElementById('enlace_3').cambiarMensaje="enlace_3";
 
 function muestraOculta(event){
     //Al entrar en la funcion se activa la opcion de esconder
-    event.currentTarget.idInVisibilidad.classList.toggle("invisibilidad");
+    document.getElementById(event.currentTarget.idInVisibilidad).classList.toggle("invisibilidad");
     //Al entrar en la función se activa la opción de cambiar el mensaje
-    let a = event.currentTarget.cambiarMensaje;
+    let a = document.getElementById(event.currentTarget.cambiarMensaje);
     
     if(a.innerHTML === "Ocultar contenidos"){
         a.innerHTML = "Mostrar Contenidos"
@@ -24,7 +24,6 @@ function muestraOculta(event){
         a.innerHTML = "Ocultar contenidos"
     }
    
-    //document.getElementById(event.currentTarget.cambiarMensaje).a;
 
 }
 /*Al final le dejo el código con el que me salia el ejercicio para poder entregarlo
